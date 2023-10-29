@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --color-subheading-app: hsl(276, 100%, 81%);
+  --color-chat-left: hsl(276, 55%, 52%);
+  --color-chat-right: hsl(271, 15%, 43%);
+  --color-placeholder: hsl(206, 6%, 79%);
+  --color-main-heading: hsl(271, 36%, 24%);
+  --color-main-para: hsl(270, 7%, 64%);
+
+  --color-linear-bg-1: hsl(293, 100%, 63%);
+  --color-linear-bg-2: hsl(264, 100%, 61%);
+
+  --color-site-1: hsl(0, 0%, 100%);
+  --color-app-bg: hsl(270, 20%, 96%);
+  --color-chat-left-bg: hsl(0, 2%, 92%);
+  --color-submit-btn-bg: hsl(271, 36%, 24%);
+  --color-radio-outline: hsl(289, 100%, 72%);
+
+  --font-rubik: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-rubik);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.PhoneCard {
+  position: sticky;
+  width: 80%;
+  max-width: 40rem;
+  background-color: var(--color-site-1);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  margin: auto;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.PhoneCard-Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    100deg,
+    var(--color-linear-bg-2),
+    var(--color-linear-bg-1)
+  );
+  padding: 4rem 2rem 2rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  position: relative;
+}
+
+.PhoneCard-Header::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1rem;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-app-bg);
+  z-index: -1;
+}
+
+.PhoneCard-Header::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -2rem;
+  left: 4rem;
+  right: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: var(--color-site-1);
+}
+
+.PhoneCard-Header-FirstPart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.PhoneCard-Header-FirstPart-BackBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.PhoneCard-Header-FirstPart-BackBtn > span {
+  display: block;
+  width: 1rem;
+  height: 2.5px;
+  background-color: var(--color-site-1);
+}
+
+.PhoneCard-Header-FirstPart-BackBtn-Span1 {
+  transform: rotate(-48deg) translateY(-2.5px);
+}
+
+.PhoneCard-Header-FirstPart-BackBtn-Span2 {
+  transform: rotate(48deg) translateY(2px);
+}
+
+.PhoneCard-Header-FirstPart-UserImg {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-site-1);
+}
+
+.PhoneCard-Header-FirstPart-UserName {
+  font-size: 1.8rem;
+  color: var(--color-site-1);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.PhoneCard-Header-FirstPart-Status {
+  font-size: 1.6rem;
+  color: var(--color-subheading-app);
+}
+
+.PhoneCard-Header-Menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 0.2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.PhoneCard-Header-Menu > span {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-site-1);
+  border-radius: 50%;
+}
+
+.PhoneCard-MsgBox {
+  background-color: var(--color-app-bg);
+  padding: 1.5rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.PhoneCard-MsgBox-UserMsg {
+  font-size: 1.4rem;
+  color: var(--color-chat-left);
+  width: 80%;
+  padding: 1rem;
+  background-color: var(--color-chat-left-bg);
+  margin-bottom: 2rem;
+  border-radius: 1.5rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.PhoneCard-MsgBox-ClientBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.PhoneCard-MsgBox-ClientBox > img {
+  display: block;
+  width: 6rem;
+  border-radius: 1.5rem;
+}
+
+.PhoneCard-MsgBox-ClientMsg {
+  font-size: 1.4rem;
+  color: var(--color-chat-right);
+  width: 80%;
+  background-color: var(--color-site-1);
+  margin-left: auto;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1.5rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.PhoneCard-MsgBox-UserBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    100deg,
+    var(--color-linear-bg-1),
+    var(--color-linear-bg-2)
+  );
+  margin-bottom: 2rem;
+  width: 80%;
+  border-radius: 1.5rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.PhoneCard-MsgBox-UserBox > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.PhoneCard-MsgBox-UserBox > div > input {
+  appearance: none;
+  display: grid;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid var(--color-radio-outline);
+  border-radius: 50%;
+  place-items: center;
+}
+
+.PhoneCard-MsgBox-UserBox > div > input:checked::after {
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: var(--color-site-1);
+}
+
+.PhoneCard-MsgBox-UserBox > div > p {
+  font-size: 1.4rem;
+  color: var(--color-subheading-app);
+}
+
+.PhoneCard-MsgBox-UserBox > strong {
+  font-size: 1.6rem;
+  color: var(--color-site-1);
+}
+
+.PhoneCard-MsgBox-AddMsg {
+  position: relative;
+}
+
+.PhoneCard-MsgBox-AddMsg > input {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.PhoneCard-MsgBox-AddMsg > button {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-main-heading);
+  border: none;
+  outline: none;
+  place-content: center;
+  cursor: pointer;
+}
+
+.PhoneCard-MsgBox-AddMsg > button > span {
+  display: block;
+  width: 1rem;
+  height: 0.2rem;
+  background-color: var(--color-site-1);
+}
+
+.PhoneCard-MsgBox-AddMsg > button > span:first-of-type {
+  transform: rotate(48deg) translateY(-0.3rem);
+}
+
+.PhoneCard-MsgBox-AddMsg > button > span:last-of-type {
+  transform: rotate(-48deg) translateY(0.3rem);
+}
+
+@media screen and (min-width: 768px) {
+  .PhoneCard {
+    transform: translateX(10rem);
+  }
+}

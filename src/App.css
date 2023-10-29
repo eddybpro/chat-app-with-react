@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --color-subheading-app: hsl(276, 100%, 81%);
+  --color-chat-left: hsl(276, 55%, 52%);
+  --color-chat-right: hsl(271, 15%, 43%);
+  --color-placeholder: hsl(206, 6%, 79%);
+  --color-main-heading: hsl(271, 36%, 24%);
+  --color-main-para: hsl(270, 7%, 64%);
+
+  --color-linear-bg-1: hsl(293, 100%, 63%);
+  --color-linear-bg-2: hsl(264, 100%, 61%);
+
+  --color-site-1: hsl(0, 0%, 100%);
+  --color-app-bg: hsl(270, 20%, 96%);
+  --color-chat-left-bg: hsl(0, 2%, 92%);
+  --color-submit-btn-bg: hsl(271, 36%, 24%);
+  --color-radio-outline: hsl(289, 100%, 72%);
+
+  --font-rubik: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-rubik);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.PhoneCardContainer {
+  width: 100%;
+  min-height: 90vh;
+  padding-top: 4rem;
+  position: relative;
+}
+
+.PhoneCardContainer::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    var(--color-linear-bg-1),
+    var(--color-linear-bg-2)
+  );
+  border-bottom-right-radius: 25rem;
+}
+
+.TxtContainer {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.TxtContainer::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 50%;
+  background-color: var(--color-app-bg);
+  border-top-left-radius: 25rem;
+  opacity: 0.3;
+}
+
+.TxtContainer-Title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-main-heading);
+  margin-bottom: 1.5rem;
+}
+
+.TxtContainer-Para {
+  font-size: 1.6rem;
+  color: var(--color-main-para);
+  line-height: 2.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6rem;
+  }
+
+  .TxtContainer {
+    text-align: left;
+  }
+
+  .TxtContainer::after {
+    height: 100vh;
+  }
+
+  .TxtContainer-Title {
+    font-size: 4rem;
+  }
+
+  .TxtContainer-Para {
+    max-width: 40rem;
+  }
+}
