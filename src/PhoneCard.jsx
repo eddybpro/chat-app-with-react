@@ -6,7 +6,10 @@ function PhoneCard() {
     <div className="PhoneCard">
       <div className="PhoneCard-Header">
         <div className="PhoneCard-Header-FirstPart">
-          <button className="PhoneCard-Header-FirstPart-BackBtn">
+          <button
+            className="PhoneCard-Header-FirstPart-BackBtn"
+            aria-label="go back"
+          >
             <span className="PhoneCard-Header-FirstPart-BackBtn-Span1"></span>
             <span className="PhoneCard-Header-FirstPart-BackBtn-Span2"></span>
           </button>
@@ -24,7 +27,7 @@ function PhoneCard() {
             </p>
           </div>
         </div>
-        <button className="PhoneCard-Header-Menu">
+        <button className="PhoneCard-Header-Menu" aria-label="menu">
           <span></span>
           <span></span>
           <span></span>
@@ -72,7 +75,10 @@ function PhoneCard() {
             aria-label="new msg"
             placeholder="Type a message..."
           />
-          <button className="PhoneCard-MsgBox-AddMsg-Btn">
+          <button
+            className="PhoneCard-MsgBox-AddMsg-Btn"
+            aria-label="send message"
+          >
             <span className="PhoneCard-MsgBox-AddMsg-Btn-Span1"></span>
             <span className="PhoneCard-MsgBox-AddMsg-Btn-Span2"></span>
           </button>
